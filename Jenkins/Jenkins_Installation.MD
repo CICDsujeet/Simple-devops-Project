@@ -35,8 +35,16 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
 
 ## Install Jenkins
 
-For UBUNTU - FOLLOW - https://linuxhostsupport.com/blog/how-to-install-jenkins-on-ubuntu-18-04/
+For UBUNTU -
 
+###################
+
+sudo wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add - &&\
+sudo echo deb http://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list &&\
+sudo apt-get update &&\
+sudo apt-get install jenkins
+
+####################
  You can install jenkins using the rpm or by setting up the repo. We will set up the repo so that we can update it easily in the future.
 1. Get the latest version of jenkins from https://pkg.jenkins.io/redhat-stable/ and install
    ```sh
